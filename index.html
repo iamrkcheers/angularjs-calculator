@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script src="Lib/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="Model/custom.js"></script>
+    <script src="Controller/controller.js"></script>
+    <title>Calculator App</title>
+</head>
+<body ng-app="mycalculatorapp" ng-controller="greetcontroller">
+    <table>
+        <tr>
+            <td><label for="">Enter First Number : </label><input type="text" placeholder="Enter First Number !" ng-model="fname"></td>
+        </tr>
+        <tr>
+            <td><label for="">Enter Second Number : </label><input type="text" placeholder="Enter Second Number !" ng-model="lname"></td>
+        </tr>
+    </table>
+<br>
+    <div>
+        <button ng-click="init('add')">Add</button>
+        <button ng-click="init('subtract')">Subtract</button>
+        <button ng-click="init('divide')">Divide</button>
+        <button ng-click="init('multiply')">Multiply</button>
+    </div>
+    <br>
+    <fieldset><legend>YOUR RESULT IS :</legend>{{result}}</fieldset>
+</body>
+</html>
